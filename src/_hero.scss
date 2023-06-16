@@ -1,0 +1,66 @@
+@use 'root';
+
+.hero {
+    padding: 160px 100px;
+    min-height: 100vh;
+    background-image: url(../assets/images/hero_desktop.png);
+    background-size: cover;
+
+        &__content {
+        max-width: 640px;
+        width: 50%;
+
+            &__brand {
+                max-width: 320px;
+
+                .title--big {
+                    text-transform: uppercase;
+                    margin-bottom: 16px;
+                }
+            }
+
+            .title--small {
+                margin-bottom: 36px;
+            }
+
+            &__category {
+                display: flex;
+                list-style: none;
+                gap: 32px;
+
+                .capitalised {
+                    text-transform: uppercase;  
+                    color: root.$color-light-dark; 
+                    font-weight: 700;                
+                }             
+            }
+
+            &__caption {
+                margin-top: 38px;
+                gap: 16px;
+            }
+            
+            button {
+                margin-top: 48px;
+                border: none;
+                border-radius: 8px;
+
+                a {
+                    display: block;
+                    width: 286px;
+                    padding: 12px 0;
+                    font-size: 24px;
+                    font-weight: 700;
+                    color: root.$bg-main;
+                    text-decoration: none;
+                    background-color: root.$btn-primary;
+                    border-radius: 8px;
+                    transition: .3s ease;
+
+                    &:hover {
+                        background-color: root.$btn-primary-hv;
+                    }
+                }
+            }
+    }
+}

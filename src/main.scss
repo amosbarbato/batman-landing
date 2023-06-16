@@ -1,3 +1,55 @@
+@use 'root';
+@use 'hero';
+
+
+@font-face {
+    font-family: SpaceGrotesk;
+    src: url(../assets/fonts/SpaceGrotesk-Bold.ttf);
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: SpaceGrotesk;
+    src: url(../assets/fonts/SpaceGrotesk-Regular.ttf);
+    font-weight: 400;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-    background-color: white;
+    background-color: root.$bg-main;
+    font-family: SpaceGrotesk, sans-serif;
+    color: root.$color-primary;
+}
+
+@mixin title($txt-size: 40px) {
+    font-size: $txt-size;
+    line-height: $txt-size + 14px;
+}
+
+.h1 {
+    @include title(72px);
+}
+
+.h4 {
+    @include title(28px);
+}
+
+.h5 {
+    @include title(24px);
+}
+
+.capitalised {
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 2px;
+}
+
+.subtitle {
+    font-size: 18px;
+    line-height: 28px;
 }
