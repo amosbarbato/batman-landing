@@ -1,0 +1,40 @@
+@use 'root';
+
+.footer {
+    padding: 36px 80px;
+    display: flex;
+    justify-content: space-between;
+    color: root.$color-light-dark;
+
+    @media (max-width: 768px) {
+        padding: 40px 22px;
+        display: block;
+    }
+
+    &__container {
+        display: flex;
+        align-items: center;
+
+        @media (max-width: 768px) {
+            padding-bottom: 40px;
+        }
+
+        &__brand {
+            padding-right: 12px;
+            height:24px; 
+        }
+    }
+
+    &__social {
+        display: flex;
+        gap: 32px;
+
+        @media (max-width: 768px) {
+            justify-content: center;
+        }
+
+        &__item {
+            height:24px; 
+        }
+    }
+}

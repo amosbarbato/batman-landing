@@ -1,5 +1,8 @@
 @use 'root';
+@use 'shows';
 @use 'hero';
+@use 'header';
+@use 'footer';
 
 
 @font-face {
@@ -24,6 +27,8 @@ body {
     background-color: root.$bg-main;
     font-family: SpaceGrotesk, sans-serif;
     color: root.$color-primary;
+    background-image: url(../assets/images/hero_desktop.png);
+    background-size: cover;
 }
 
 @mixin title($txt-size: 40px) {
@@ -43,13 +48,77 @@ body {
     @include title(24px);
 }
 
+ul {
+    list-style: none;
+}
+
 .capitalised {
     font-size: 14px;
     line-height: 18px;
     letter-spacing: 2px;
+    text-transform: uppercase;  
+    color: root.$color-light-dark; 
+    font-weight: 700;  
 }
 
 .subtitle {
     font-size: 18px;
     line-height: 28px;
+}
+
+.subtitle-md {
+    padding: 6px 0;
+    font-weight: 700;
+}
+
+.subtitle-sm {
+    font-size: 10px;
+}
+
+
+.caption {
+    padding: 6px 0;
+    line-height: 16px;
+    font-size: 12px;
+    color: root.$color-light-dark;
+}
+
+.btn {
+    border: 2px transparent;
+    border-radius: 8px;
+    transition: .3s ease;
+}
+
+a {
+    font-family: SpaceGrotesk, sans-serif;
+    text-decoration: none;
+}
+
+
+.btn-primary {
+    background-color: root.$btn-primary;
+
+    &:hover {
+        background-color: root.$btn-hover;
+        color: white;
+    }
+
+    a {
+        font-weight: 700;
+        color: root.$bg-main;
+        border-radius: 8px;   
+    }   
+}
+
+.btn-secondary {
+    border: 1px solid root.$color-light-dark;
+    background-color: root.$bg-main;
+
+    &:hover {
+        background-color: root.$btn-dark;
+    }
+    
+    a {
+        color: root.$color-light-dark;
+    }
 }
